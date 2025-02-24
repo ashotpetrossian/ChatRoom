@@ -109,8 +109,7 @@ void Client::startRead()
 
 int main()
 {
-	Client client("192.168.10.22", "25000");
-	//Client client("5.77.193.201", "25000");
+	Client client("127.0.0.1", "25000");
 	auto connectFuture = client.connect();
 	try {
 		connectFuture.get(); // blocks the thread until std::promise has set a value or exception, means until the connection attempt is resolved
